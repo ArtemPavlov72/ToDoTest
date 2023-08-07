@@ -15,9 +15,8 @@
 		AC74A3982A81000F000A9112 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74A3972A81000F000A9112 /* StorageManager.swift */; };
 		AC74A39B2A8100AE000A9112 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74A39A2A8100AE000A9112 /* TaskListViewController.swift */; };
 		AC74A39D2A8100E3000A9112 /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74A39C2A8100E3000A9112 /* AddInfoViewController.swift */; };
-		AC74A39F2A81012B000A9112 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74A39E2A81012B000A9112 /* AlertManager.swift */; };
-		AC74A3A12A81015B000A9112 /* Extension + UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74A3A02A81015B000A9112 /* Extension + UITableViewCell.swift */; };
-		AC74A3A32A8102D7000A9112 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74A3A22A8102D7000A9112 /* UIButton.swift */; };
+		AC74A39F2A81012B000A9112 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74A39E2A81012B000A9112 /* UIAlertController.swift */; };
+		AC74A3A12A81015B000A9112 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC74A3A02A81015B000A9112 /* UITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +30,8 @@
 		AC74A3972A81000F000A9112 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		AC74A39A2A8100AE000A9112 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		AC74A39C2A8100E3000A9112 /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
-		AC74A39E2A81012B000A9112 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
-		AC74A3A02A81015B000A9112 /* Extension + UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UITableViewCell.swift"; sourceTree = "<group>"; };
-		AC74A3A22A8102D7000A9112 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		AC74A39E2A81012B000A9112 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		AC74A3A02A81015B000A9112 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				AC74A3922A80FB76000A9112 /* ViewControllers */,
+				AC74A3A72A817629000A9112 /* Extensions */,
 				AC74A3962A80FD85000A9112 /* Models */,
 				AC74A3992A810012000A9112 /* Services */,
 				AC74A3912A80FB70000A9112 /* App */,
@@ -99,8 +98,6 @@
 				AC74A39A2A8100AE000A9112 /* TaskListViewController.swift */,
 				AC74A3802A80F693000A9112 /* TaskViewController.swift */,
 				AC74A39C2A8100E3000A9112 /* AddInfoViewController.swift */,
-				AC74A3A02A81015B000A9112 /* Extension + UITableViewCell.swift */,
-				AC74A3A22A8102D7000A9112 /* UIButton.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -117,9 +114,17 @@
 			isa = PBXGroup;
 			children = (
 				AC74A3972A81000F000A9112 /* StorageManager.swift */,
-				AC74A39E2A81012B000A9112 /* AlertManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AC74A3A72A817629000A9112 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC74A3A02A81015B000A9112 /* UITableViewCell.swift */,
+				AC74A39E2A81012B000A9112 /* UIAlertController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,10 +202,9 @@
 				AC74A37D2A80F693000A9112 /* AppDelegate.swift in Sources */,
 				AC74A3982A81000F000A9112 /* StorageManager.swift in Sources */,
 				AC74A39D2A8100E3000A9112 /* AddInfoViewController.swift in Sources */,
-				AC74A39F2A81012B000A9112 /* AlertManager.swift in Sources */,
+				AC74A39F2A81012B000A9112 /* UIAlertController.swift in Sources */,
 				AC74A39B2A8100AE000A9112 /* TaskListViewController.swift in Sources */,
-				AC74A3A12A81015B000A9112 /* Extension + UITableViewCell.swift in Sources */,
-				AC74A3A32A8102D7000A9112 /* UIButton.swift in Sources */,
+				AC74A3A12A81015B000A9112 /* UITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

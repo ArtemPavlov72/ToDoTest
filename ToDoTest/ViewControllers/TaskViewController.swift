@@ -19,13 +19,13 @@ class TaskViewController: UITableViewController {
   private let cellID = "cell"
   private var currentTasks: [TaskCD] = []
   private var completedTasks: [TaskCD] = []
-  
-  
+
   //MARK: - Public Properties
 
   var taskList: TaskList?
   
   // MARK: - Life Cycles Methods
+
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .systemBackground
@@ -89,13 +89,7 @@ class TaskViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    completeTask(at: indexPath)
 
-  }
-  
-  // MARK: - Private Methods
-
-  private func completeTask(at indexPath: IndexPath) {
     let task = indexPath.section == 0 ? currentTasks[indexPath.row] : completedTasks[indexPath.row]
 
     if indexPath.section == 0 {
@@ -113,6 +107,8 @@ class TaskViewController: UITableViewController {
     let destinationIndex = indexPath.section == 0 ? indexPathForCompletedTask : indexPathForCurrentTask
     tableView.moveRow(at: indexPath, to: destinationIndex)
   }
+  
+  // MARK: - Private Methods
 
   private func setupNavigationBar() {
     title = taskList?.title
@@ -167,4 +163,3 @@ extension TaskViewController {
     present(alert, animated: true)
   }
 }
-

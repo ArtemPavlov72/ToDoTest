@@ -16,6 +16,7 @@ class AddInfoViewController: UIViewController {
     let textField = UITextField()
     isTaskList ? (textField.placeholder = "New list") : (textField.placeholder = "New task")
     textField.borderStyle = .roundedRect
+    isTaskList ? (textField.returnKeyType = .done) : (textField.returnKeyType = .next)
     return textField
   }()
   
@@ -23,6 +24,7 @@ class AddInfoViewController: UIViewController {
     let textField = UITextField()
     textField.placeholder = "Task Description"
     textField.borderStyle = .roundedRect
+    textField.returnKeyType = .done
     return textField
   }()
   
@@ -60,6 +62,8 @@ class AddInfoViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .systemGray6
+    taskTextField.delegate = self
+    taskNoteTextField.delegate = self
     configureLayout()
   }
   
@@ -128,10 +132,29 @@ class AddInfoViewController: UIViewController {
   }
 }
 
+//MARK: - UITextFieldDelegate
+
+extension AddInfoViewController: UITextFieldDelegate {
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    super.touchesBegan(touches, with: event)
+    view.endEditing(true)
+  }
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    if textField == taskTextField, !isTaskList {
+      taskNoteTextField.becomeFirstResponder()
+    } else {
+      saveAction()
+    }
+    return true
+  }
+}
+
 // MARK: - Appearance
 
 private extension AddInfoViewController {
   struct Appearance {
+    let backgroundColor: UIColor = .systemGray6
     let buttonSize: CGFloat = UIScreen.main.bounds.width * 0.5
     let textFieldSize: CGFloat = UIScreen.main.bounds.width * 0.8
     let defaultInset: CGFloat = 20
